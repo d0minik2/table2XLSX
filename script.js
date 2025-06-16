@@ -189,13 +189,25 @@ class table2XLSX {
 const fixUwagi = (row) => {
     const uwagi = row[row.length - 1]
     console.log(uwagi)
-    const searchedPhrase = "Data urodzenia: "
+    let searchedPhrase = "Data urodzenia: "
 
     if (uwagi.includes(searchedPhrase)) {
         const phraseIndex = uwagi.indexOf(searchedPhrase)
         row[row.length - 1] = uwagi.substr(phraseIndex + searchedPhrase.length, 10)
     } else {
-        row[row.length - 1] = "null"
+        searchedPhrase = "Data urodzenia "
+        if (uwagi.includes(searchedPhrase)) {
+            const phraseIndex = uwagi.indexOf(searchedPhrase)
+
+            let date = new Date(uwagi.substr(phraseIndex + searchedPhrase.length, 10)).toLocaleDateString()
+            if (date == "Invalid Date") {
+                date = new Date(uwagi.substr(phraseIndex + searchedPhrase.length, 7)).toLocaleDateString()
+            }
+            row[row.length - 1] = date
+        } else {
+            row[row.length - 1] = "brak"
+            console.log(row)
+        }
     }
 
     return row
