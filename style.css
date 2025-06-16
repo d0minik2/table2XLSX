@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+
+body {
+    background-color: rgb(212, 212, 212);
+    margin: 0;
+    padding: 0;
+    border-radius: 16px;
+}
+
+main {
+    background-color: rgb(244, 245, 247);
+    padding: 20px;
+    border-radius: 16px;
+    width: 300px;
+}
+
+main>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(70, 161, 111);
+    color: white;
+    padding: 10px 40px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(58, 131, 91);
+}
+
+h1,
+h2 {
+    font-size: 16px;
+
+}
+
+h2 {
+    margin-bottom: 8px;
+}
+
+p {
+    font-size: 14px;
+    color: rgb(80, 80, 80);
+    text-align: center;
+}
+
+#editTableBtn {
+    background-color: rgb(231, 231, 231);
+    color: black;
+    padding: 8px;
+}
+
+#editTableBtn:hover {
+    background-color: rgb(201, 201, 201);
+}
+
+#table {
+    background-color: rgb(231, 231, 231);
+    color: black;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+#downloadBtn,
+#saveSettings {
+    margin-top: 8px;
+}
+
+#downloadAllBtn {
+    background-color: rgb(231, 231, 231);
+    color: black;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+#downloadAllBtn:hover {
+    background-color: rgb(218, 218, 218);
+}
+
+#tables {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#tables input {
+    display: none;
+}
+
+#tables label {
+    background-color: rgb(231, 231, 231);
+    color: black;
+    padding: 8px;
+    border-radius: 8px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+#tables label:hover {
+    background-color: rgb(218, 218, 218);
+}
+
+
+#tables input[type="radio"]:checked+label {
+    background-color: rgb(70, 161, 111);
+    color: white;
+}
+
+#selectedColumns,
+#selectedColumnsSettings {
+    display: block;
+}

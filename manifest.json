@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "table2XLSX",
+  "version": "1.0",
+  "description": "Pobieranie tabeli do pliku Excela",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads"
+  ],
+  "action": {
+    "default_popup": "table2XLSX.html"
+
+  },
+  "background": {
+    "scripts": ["xlsx.full.min.js", "script.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "web_accessible_resources": [{
+    "resources": ["xlsx.full.min.js", "script.js"],
+    "matches": ["<all_urls>"]
+  }]
+} 
