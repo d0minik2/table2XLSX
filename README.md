@@ -4,3 +4,4 @@ Dodatek do chroma, który pozwala na pobranie dane z tabel do pliku Excela (.xls
 
 ## Jak zainstalować?
 
+1. 
